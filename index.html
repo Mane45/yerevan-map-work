@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>Yerevan</title>
+    <link rel="stylesheet" href="./basmapbuttin.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.25/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.25/"></script>
+  </head>
+
+  <body>
+    <!-- <div id="map"></div>
+    <div id="infoDiv">
+      <input
+        class="esri-component esri-widget--button esri-widget esri-interactive"
+        type="button"
+        id="switch-btn"
+        value="2D"
+      />
+    </div> -->
+    <div id="container">
+      <!-- <div id="header">menu</div> -->
+      <div id="map"></div>
+      <a class="geovibe-link" href="https://geo-vibe.com/" target="_black"
+        ><img class="geovibe-logo" src="./img/geovibe.png"
+      /></a>
+      <div id="infoDiv">
+        <input
+          class="esri-component esri-widget--button esri-widget esri-interactive"
+          type="button"
+          id="switch-btn"
+          value="2D"
+        />
+      </div>
+      <!-- <div id="basemapToggle">"osm"</div>
+      <div id="basemapToggle1">"satellite"</div> -->
+      <div id="menu">
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/1.png" /></button>
+          <div class="dropdown-content">
+            <a class="categoryBtn" href="#" title="Մանկական ժամանց"
+              ><img src="./img/1.1.png" alt="Մանկական ժամանց"
+            /></a>
+            <a class="categoryBtn" href="#" title="Հրապարակներ"
+              ><img src="./img/1.2.png" alt="Հրապարակներ"
+            /></a>
+            <a class="categoryBtn" href="#" title="Շատրվաններ"
+              ><img src="./img/1.3.png" alt="Շատրվաններ"
+            /></a>
+            <a class="categoryBtn" href="#" title="Կամարանցումներ"
+              ><img src="./img/1.4.png" alt="Կամարանցումներ"
+            /></a>
+            <a class="categoryBtn" href="#" title="Investment programs"
+              ><img src="./img/1.5.png" alt="Investment programs"
+            /></a>
+            <a class="categoryBtn" id="mystyle1" title="Այգիներ" href="#"
+              ><img src="./img/1.6.png" alt="Այգիներ"
+            /></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/2.png" /></button>
+          <div class="dropdown-content">
+            <a href="#" title="Մանկական ժամանց"
+              ><img src="./img/2.1.png" alt="Կինոթատրոններ"
+            /></a>
+            <a href="#" title="Թատրոններ"
+              ><img src="./img/2.2.png" alt="Թատրոններ"
+            /></a>
+            <a href="#" title="Համերգասրահներ"
+              ><img src="./img/2.3.png" alt="Համերգասրահներ"
+            /></a>
+            <a href="#" title="Թանգարաններ"
+              ><img src="./img/2.4.png" alt="Թանգարաններ"
+            /></a>
+            <a href="#" title="Պատկերասրահներ"
+              ><img src="./img/2.5.png" alt="Պատկերասրահներ"
+            /></a>
+            <a href="#" title="Հուշարձաններ"
+              ><img src="./img/2.7.png" alt="Հուշարձաններ"
+            /></a>
+            <a href="#" title="Մշակույթի կենտրոններ"
+              ><img src="./img/2.8.png" alt="Մշակույթի կենտրոններ"
+            /></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/3.png" /></button>
+          <div class="dropdown-content">
+            <a href="#" title="Հիվանդանոցներ"
+              ><img src="./img/3.1.png" alt="Հիվանդանոցներ"
+            /></a>
+            <a href="#" title="Պոլիկլինիկաներ"
+              ><img src="./img/3.2.png" alt="Պոլիկլինիկաներ"
+            /></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/4.png" /></button>
+          <div class="dropdown-content">
+            <a href="#" title="Բուհեր"
+              ><img src="./img/4.png" alt="Բուհեր"
+            /></a>
+            <a href="#" title="Դպրոցներ"
+              ><img src="./img/4.2.png" alt="Դպրոցներ"
+            /></a>
+            <a href="#" title="Մանկապարտեզներ"
+              ><img src="./img/4.3.png" alt="Մանկապարտեզներ"
+            /></a>
+            <a href="#" title="Գրադարաններ"
+              ><img src="./img/4.4.png" alt="Գրադարաններ"
+            /></a>
+            <a href="#" title="Երաժշտական և արվեստի դպրոցներ"
+              ><img src="./img/4.5.png" alt="Երաժշտական և արվեստի դպրոցներ"
+            /></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/5.png" alt="" /></button>
+          <div class="dropdown-content">
+            <a href="#" title="Եկեղեցիներ"
+              ><img src="./img/5.1.png" alt="Եկեղեցիներ"
+            /></a>
+            <a href="#" title="Դեսպանություններ"
+              ><img src="./img/5.png" alt="Դեսպանություններ"
+            /></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/6.png" /></button>
+          <div class="dropdown-content">
+            <a href="#" title="Սահադաշտեր"
+              ><img src="./img/6.1.png" alt="Սահադաշտեր"
+            /></a>
+            <a href="#" title="Մարզադպրոցներ"
+              ><img src="./img/6.2.png" alt="Մարզադպրոցներ"
+            /></a>
+            <a href="#" id="mystyle2" title="Մարզասրահներ"
+              ><img src="./img/6.3.png" alt="Մարզասրահներ"
+            /></a>
+            <a href="#" title="Հեծանվահրապարակներ"
+              ><img src="./img/6.4.png" alt="Հեծանվահրապարակներ"
+            /></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/7.png" /></button>
+          <div class="dropdown-content">
+            <a href="#" title="Մետրոյի կայարաններ"
+              ><img src="./img/7.1.png" alt="Մետրոյի կայարաններ"
+            /></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><img src="./img/8.png" /></button>
+          <div class="dropdown-content">
+            <a href="#" title="Բենզալցակայան"
+              ><img src="./img/8.1.png" alt="Բենզալցակայան"
+            /></a>
+            <a href="#" title="Electric vehicle charging station"
+              ><img src="./img/8.2.png" alt="Electric vehicle charging station"
+            /></a>
+          </div>
+        </div>
+        <!-- <div class="dropdown1">
+          <button  class="dropbtn1"><img src="./img/event.png" /></button>
+        </div> -->
+      </div>
+      <div id="events">
+        <button id="eventBtn"><img src="./img/event.png"/></button>
+      </div>
+    </div>
+    <!-- <div id="changeBaseMap">
+      <div id="basemapToggle">"osm"</div>
+      <div id="basemapToggle1">"satellite"</div>
+    </div> -->
+    <div id="chnagers">
+      <div id="changeBaseMap">
+        <input
+          id="toggle-on"
+          class="toggle toggle-left"
+          name="toggle"
+          value="false"
+          type="radio"
+          checked
+        />
+        <label for="toggle-on" class="btn">Street</label>
+        <input
+          id="toggle-off"
+          class="toggle toggle-right"
+          name="toggle"
+          type="radio"
+        />
+        <label for="toggle-off" class="btn">Satellite</label>
+      </div>
+      <div id="changeMap">
+        <input
+          id="toggle-on1"
+          class="toggle1 toggle-left"
+          name="toggle1"
+          value="false"
+          type="radio"
+          checked
+        />
+        <label for="toggle-on1" class="btn1">3D</label>
+        <input
+          id="toggle-off1"
+          class="toggle1 toggle-right"
+          name="toggle1"
+          type="radio"
+        />
+        <label for="toggle-off1" class="btn1">2D</label>
+      </div>
+    </div>
+    
+
+  </body>
+  <script src="./main.js"></script>
+</html>
